@@ -172,7 +172,6 @@ button {
   margin-right: 10px;
   fill: currentColor;
 
-  transition: color 250ms var(--timing-function);
 }
 .icon-mail:hover,
 .icon-mail:focus {
@@ -222,7 +221,7 @@ button {
   background-color: rgba(33, 32, 30, 0.192);
   
   opacity: 1;
-  transition: opasity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function);
 }
 .backdrop.is-hidden{
   visibility: hidden;
@@ -340,7 +339,7 @@ opacity: 1;
   letter-spacing: 0.03em;
   cursor: pointer;
   
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 
 .button.secondary:hover,
@@ -459,20 +458,13 @@ opacity: 1;
   position: absolute;
   display: flex;
   bottom: 0;
-  left: 0;
   width: 100%;
-  min-height: 70px;
+  height: 70px;
   justify-content: center;
   align-items: center;
-  
-  
-  font-family: 'Roboto';
-font-style: normal;
+   
 font-weight: 700;
-font-size: 14px;
-line-height: 16px;
-text-align: center;
-letter-spacing: 0.03em;
+line-height: 1.14;
 text-transform: uppercase;
 color: #FFFFFF;
 background: rgba(47, 48, 58, 0.8);
@@ -608,6 +600,7 @@ color: #FFFFFF;
 
 .project .link {
   display: block;
+  transition: box-shadow 250ms var(--timing-function);
   
 }
 .project .link:hover,
@@ -621,7 +614,7 @@ color: #FFFFFF;
 
   
 }
-.project-name:hover .overlay{
+.project .link:hover .overlay, .project .link:focus .overlay{
   transform: translateY(0);
   
 }
@@ -692,6 +685,7 @@ color: #FFFFFF;
   height: 60px;
   fill: var(--icon-color);
 }
+
 
 .adress .adress-link {
   color: var(--white);
